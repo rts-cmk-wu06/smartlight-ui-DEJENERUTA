@@ -1,13 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html,
+body,
+#root {
+	height: 100%;
+}
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	font-family: "Montserrat", sans-serif;
+	font-weight: 700;
+	background-color: darkblue;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+img {
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
+a {
+	text-decoration: none;
+}
+
+button {
+	background: none;
+	cursor: pointer;
+}
+
+button,
+a {
+	color: inherit;
+}
+
+select,
+button,
+textarea {
+	font-family: inherit;
+}
+
+input,
+button,
+textarea {
+	border: none;
+}
+
+textarea:focus {
+	outline: none;
+}
+
+ul {
+	list-style: none;
+}
+
+input:focus {
+	outline: none;
+}
+
+input[type="submit"] {
+	cursor: pointer;
+}
+.footer {
+	height: calc(100% / 13);
+	background-color: white;
+}
+.footer p {
+	display: flex;
+	justify-content: center;
+	align-self: center;
+	text-align: center;
 }
