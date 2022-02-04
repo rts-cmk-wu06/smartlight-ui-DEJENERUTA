@@ -18,6 +18,9 @@ body {
 	font-family: "Montserrat", sans-serif;
 	font-weight: 700;
 	background-color: darkblue;
+	/* max-width: 475px;
+	height: 812px;
+	margin: 0 auto; */
 }
 
 img {
@@ -70,10 +73,4 @@ input[type="submit"] {
 .footer {
 	height: calc(100% / 13);
 	background-color: white;
-}
-.footer p {
-	display: flex;
-	justify-content: center;
-	align-self: center;
-	text-align: center;
 }
