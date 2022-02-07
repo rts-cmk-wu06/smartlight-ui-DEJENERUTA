@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import Avatar from "@material-ui/core/Avatar";
+import Avatar from "./Avatar";
 import ButtonComponent from "./ButtonComponent";
-import profileImage from "../assets/profile.jpg";
+
 import bedImage from "../assets/bed.svg";
 import livingStaff from "../assets/room.svg";
 import kitchenStaff from "../assets/kitchen.svg";
@@ -44,16 +44,11 @@ const Home = () => {
 				variants={headerVariants}
 				transition={pageTransition}
 			>
-				<h2 className="control-panel  text-white">
+				<h2 className="control-panel  text-white text-3xl">
 					Control <span className="Panel block">Panel</span>
 				</h2>
 
-				<Avatar
-					className="b-1 rounded-full p-8"
-					src={profileImage}
-					style={{ width: "100px", height: "100px" }}
-					alt="profile"
-				/>
+				<Avatar />
 			</motion.div>
 			<motion.div
 				className="white-panel bg-gray rounded-t-3xl"
@@ -63,11 +58,11 @@ const Home = () => {
 				variants={whitePanelVariants}
 				transition={pageTransition}
 			>
-				<h1 className="home-title p-8">All Rooms</h1>
+				<h1 className="home-title p-8 text-lg pb-0">All Rooms</h1>
 				<nav className="nav">
-					<ul className="ul  gap-8 p-3 grid grid-cols-2 place-content-center">
-						<li className="">
-							<Link to="/room">
+					<ul className="ul  gap-8 p-8 grid grid-cols-2 place-content-center ">
+						<li className="w-full">
+							<Link className="block" to="/room">
 								<ButtonComponent
 									image={bedImage}
 									title="Bed room"
@@ -75,8 +70,8 @@ const Home = () => {
 								/>
 							</Link>
 						</li>
-						<li>
-							<Link to="/room">
+						<li className="w-full">
+							<Link className="block" to="/room">
 								<ButtonComponent
 									image={livingStaff}
 									title="Living room"
@@ -84,8 +79,8 @@ const Home = () => {
 								/>
 							</Link>
 						</li>
-						<li>
-							<Link to="/room">
+						<li className="w-full">
+							<Link className="block" to="/room">
 								<ButtonComponent
 									image={kitchenStaff}
 									title="Kitchen"
@@ -93,8 +88,8 @@ const Home = () => {
 								/>
 							</Link>
 						</li>
-						<li>
-							<Link to="/room">
+						<li className="w-full">
+							<Link className="block" to="/room">
 								<ButtonComponent
 									image={bathStaff}
 									title="Bath room"
@@ -102,8 +97,8 @@ const Home = () => {
 								/>
 							</Link>
 						</li>
-						<li>
-							<Link to="/room">
+						<li className="w-full">
+							<Link className="block" to="/room">
 								<ButtonComponent
 									image={outDoor}
 									title="Outdoor"
@@ -111,8 +106,8 @@ const Home = () => {
 								/>
 							</Link>
 						</li>
-						<li>
-							<Link to="/room">
+						<li className="w-full">
+							<Link className="block" to="/room">
 								<ButtonComponent
 									image={balconyStaff}
 									title="Balcony"
