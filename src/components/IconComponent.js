@@ -2,7 +2,7 @@ import React from "react";
 
 const IconComponent = ({ icon }) => {
 	return (
-		<div className="text-2xl">
+		<div className="text-sm ">
 			<img src={icon} />
 		</div>
 	);
