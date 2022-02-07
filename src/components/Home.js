@@ -65,8 +65,8 @@ const Home = () => {
 			>
 				<h1 className="home-title p-8">All Rooms</h1>
 				<nav className="nav">
-					<ul className="ul flex gap-10 p-3">
-						<li>
+					<ul className="ul  gap-8 p-3 grid grid-cols-2 place-content-center">
+						<li className="">
 							<Link to="/room">
 								<ButtonComponent
 									image={bedImage}
@@ -93,8 +93,6 @@ const Home = () => {
 								/>
 							</Link>
 						</li>
-					</ul>
-					<ul className="second-ul flex gap-10 mt-5 p-3">
 						<li>
 							<Link to="/room">
 								<ButtonComponent
