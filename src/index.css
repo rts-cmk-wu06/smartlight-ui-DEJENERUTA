@@ -134,3 +134,6 @@ input:focus {
 	background: #04aa6d;
 	cursor: pointer;
 }
+.circle > div {
+	border-radius: 50%;
+}
