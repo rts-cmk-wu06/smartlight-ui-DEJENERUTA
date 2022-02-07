@@ -1,10 +1,12 @@
 import React from "react";
+import LightComponent from "./LightComponent";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import Avatar from "@material-ui/core/Avatar";
-import profileImage from "../assets/profile.jpg";
-/* import backArrowImage from "../assets/back-arrow.svg";
-import Avatar from "@material-ui/core/Avatar"; */
+import lightBulbImage from "../assets/light-bulb.jpg";
+import surfaceImage from "../assets/surface.svg";
+import furnitureImage from "../assets/furniture-household.svg";
+import bedLilleImage from "../assets/bed-lille.svg";
 
 const headerVariants = {
 	in: {
@@ -43,26 +45,30 @@ const Room = () => {
 						<h1 className="room-title p-8">
 							<span className="arrow">⬅️</span> Bed
 							<span className="room block">Room</span>
+							<p className="text-goldenYello">4 Lights</p>
 						</h1>
 					</Link>
 					<Avatar
 						className="b-1 rounded-full p-8"
-						src={profileImage}
-						style={{ width: "100px", height: "100px" }}
+						src={lightBulbImage}
+						style={{ width: "150px", height: "150px" }}
 						alt="profile"
 					/>
 				</div>
+				<div className="flex justify-between items-center p-8 bottom-4">
+					<LightComponent image={surfaceImage} txt="Main Lights" />
+					<LightComponent image={furnitureImage} txt="Desk lights" />
+					<LightComponent image={bedLilleImage} txt="Bed" />
+				</div>
 			</motion.div>
 			<motion.div
-				className="white-panel bg-white rounded-t-3xl"
+				className="white-panel bg-gray rounded-t-3xl"
 				initial="initial"
 				animate="in"
 				exit="out"
 				variants={whitePanelVariants}
 				transition={pageTransition}
-			>
-				<h1 className="p-8">BedRoom</h1>
-			</motion.div>
+			></motion.div>
 		</>
 	);
 };
