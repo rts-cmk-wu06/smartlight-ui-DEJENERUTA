@@ -12,6 +12,7 @@ import powerOff from "../assets/poweroff.svg";
 import solutionRight from "../assets/solutionright.svg";
 import solutionLeft from "../assets/solutionleft.svg";
 import Slider from "react-input-slider";
+import ColorComponent from "./ColorComponent";
 
 const headerVariants = {
 	in: {
@@ -90,7 +91,7 @@ const Room = () => {
 				/>
 				<div className="w-full">
 					<h1 className="p-8">Intensity</h1>
-					<div className="lights flex justify-between items-end w-full">
+					<div className="lights flex justify-between items-end w-full p-8">
 						<img
 							src={solutionRight}
 							style={{ width: "50px", height: "50px" }}
@@ -134,6 +135,7 @@ const Room = () => {
 							alt=""
 						/>
 					</div>
+					<ColorComponent />
 				</div>
 			</motion.div>
 		</>
