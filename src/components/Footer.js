@@ -6,7 +6,7 @@ import settings from "../assets/settings.svg";
 
 const Footer = () => {
 	return (
-		<footer className="footer flex justify-center gap-40 items-center align-middle">
+		<footer className="footer flex justify-center gap-20 items-center align-middle">
 			<IconComponent icon={bulb} />
 			<IconComponent icon={home} />
 			<IconComponent icon={settings} />

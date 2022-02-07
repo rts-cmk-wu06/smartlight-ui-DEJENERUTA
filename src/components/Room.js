@@ -13,6 +13,8 @@ import solutionRight from "../assets/solutionright.svg";
 import solutionLeft from "../assets/solutionleft.svg";
 import Slider from "react-input-slider";
 import ColorComponent from "./ColorComponent";
+import ScenesComponent from "./ScenesComponent";
+import scenesImage from "../assets/scenes-light.svg";
 
 const headerVariants = {
 	in: {
@@ -136,6 +138,12 @@ const Room = () => {
 						/>
 					</div>
 					<ColorComponent />
+					<div className="flex grid grid-cols-2 gap-4 p-8">
+						<ScenesComponent image={scenesImage} txt="BirthDay" />
+						<ScenesComponent image={scenesImage} txt="Party" />
+						<ScenesComponent image={scenesImage} txt="Relax" />
+						<ScenesComponent image={scenesImage} txt="Fun" />
+					</div>
 				</div>
 			</motion.div>
 		</>
