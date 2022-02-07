@@ -51,18 +51,24 @@ const Room = () => {
 			>
 				<div className="room-header flex justify-between">
 					<Link className="back text-white" to="/">
-						<h1 className="room-title p-8">
+						<h1 className="room-title p-8 pb-2 text-3xl">
 							<span className="arrow">
 								<img
 									src={arrowBack}
-									style={{ width: "10px", height: "10px" }}
+									style={{
+										width: "20px",
+										height: "20px",
+										display: "inline-block",
+										verticalAlign: "middle",
+										marginRight: "5px",
+									}}
 									alt=""
 								/>
-							</span>{" "}
+							</span>
 							Bed
 							<span className="room block">Room</span>
-							<p className="text-goldenYello">4 Lights</p>
 						</h1>
+						<p className="text-goldenYello p-8 pt-0 pb-2">4 Lights</p>
 					</Link>
 					<Avatar
 						className="b-1 rounded-full p-8"
