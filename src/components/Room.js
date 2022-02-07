@@ -2,9 +2,7 @@ import React, { useState } from "react";
 import LightComponent from "./LightComponent";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import Avatar from "@material-ui/core/Avatar";
 import arrowBack from "../assets/back-arrow.svg";
-import lightBulbImage from "../assets/light-bulb.jpg";
 import surfaceImage from "../assets/surface.svg";
 import furnitureImage from "../assets/furniture-household.svg";
 import bedLilleImage from "../assets/bed-lille.svg";
@@ -15,6 +13,7 @@ import Slider from "react-input-slider";
 import ColorComponent from "./ColorComponent";
 import ScenesComponent from "./ScenesComponent";
 import scenesImage from "../assets/scenes-light.svg";
+import Lamp from "./Lamp";
 
 const headerVariants = {
 	in: {
@@ -51,27 +50,28 @@ const Room = () => {
 			>
 				<div className="room-header flex justify-between">
 					<Link className="back text-white" to="/">
-						<h1 className="room-title p-8">
+						<h1 className="room-title p-8 pb-2 text-3xl">
 							<span className="arrow">
 								<img
 									src={arrowBack}
-									style={{ width: "10px", height: "10px" }}
+									style={{
+										width: "20px",
+										height: "20px",
+										display: "inline-block",
+										verticalAlign: "middle",
+										marginRight: "5px",
+									}}
 									alt=""
 								/>
-							</span>{" "}
+							</span>
 							Bed
 							<span className="room block">Room</span>
-							<p className="text-goldenYello">4 Lights</p>
 						</h1>
+						<p className="text-goldenYello p-8 pt-0 pb-2">4 Lights</p>
 					</Link>
-					<Avatar
-						className="b-1 rounded-full p-8"
-						src={lightBulbImage}
-						style={{ width: "150px", height: "150px" }}
-						alt="profile"
-					/>
+					<Lamp color="#FFD139" />
 				</div>
-				<div className="flex justify-between items-center p-8 bottom-4">
+				<div className="flex justify-between items-center p-8 pb-2">
 					<LightComponent image={surfaceImage} txt="Main Lights" />
 					<LightComponent image={furnitureImage} txt="Desk lights" />
 					<LightComponent image={bedLilleImage} txt="Bed" />
@@ -92,8 +92,8 @@ const Room = () => {
 					alt=""
 				/>
 				<div className="w-full">
-					<h1 className="p-8">Intensity</h1>
-					<div className="lights flex justify-between items-end w-full p-8">
+					<h1 className="p-8 pb-2">Intensity</h1>
+					<div className="lights flex justify-between items-end w-full p-8 pb-0 pt-0">
 						<img
 							src={solutionRight}
 							style={{ width: "50px", height: "50px" }}
@@ -132,13 +132,18 @@ const Room = () => {
 							</div>
 						</div>
 						<img
+							className="solution-left"
 							src={solutionLeft}
-							style={{ width: "50px", height: "50px" }}
+							style={{
+								width: "50px",
+								height: "50px",
+							}}
 							alt=""
 						/>
 					</div>
 					<ColorComponent />
-					<div className="flex grid grid-cols-2 gap-4 p-8">
+					<h1 className="p-8 pb-4">Scenes</h1>
+					<div className=" grid grid-cols-2 gap-4 p-8 pt-0">
 						<ScenesComponent image={scenesImage} txt="BirthDay" />
 						<ScenesComponent image={scenesImage} txt="Party" />
 						<ScenesComponent image={scenesImage} txt="Relax" />

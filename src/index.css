@@ -17,7 +17,88 @@ body,
 body {
 	font-family: "Montserrat", sans-serif;
 	font-weight: 700;
-	background-color: darkblue;
+	background-image: radial-gradient(
+			circle at 29% 55%,
+			hsla(329, 0%, 99%, 0.05) 0%,
+			hsla(329, 0%, 99%, 0.05) 4%,
+			transparent 4%,
+			transparent 44%,
+			transparent 44%,
+			transparent 100%
+		),
+		radial-gradient(
+			circle at 85% 89%,
+			hsla(329, 0%, 99%, 0.05) 0%,
+			hsla(329, 0%, 99%, 0.05) 51%,
+			transparent 51%,
+			transparent 52%,
+			transparent 52%,
+			transparent 100%
+		),
+		radial-gradient(
+			circle at 6% 90%,
+			hsla(329, 0%, 99%, 0.05) 0%,
+			hsla(329, 0%, 99%, 0.05) 53%,
+			transparent 53%,
+			transparent 64%,
+			transparent 64%,
+			transparent 100%
+		),
+		radial-gradient(
+			circle at 35% 75%,
+			hsla(329, 0%, 99%, 0.05) 0%,
+			hsla(329, 0%, 99%, 0.05) 6%,
+			transparent 6%,
+			transparent 98%,
+			transparent 98%,
+			transparent 100%
+		),
+		radial-gradient(
+			circle at 56% 75%,
+			hsla(329, 0%, 99%, 0.05) 0%,
+			hsla(329, 0%, 99%, 0.05) 16%,
+			transparent 16%,
+			transparent 23%,
+			transparent 23%,
+			transparent 100%
+		),
+		radial-gradient(
+			circle at 42% 0%,
+			hsla(329, 0%, 99%, 0.05) 0%,
+			hsla(329, 0%, 99%, 0.05) 3%,
+			transparent 3%,
+			transparent 26%,
+			transparent 26%,
+			transparent 100%
+		),
+		radial-gradient(
+			circle at 29% 28%,
+			hsla(329, 0%, 99%, 0.05) 0%,
+			hsla(329, 0%, 99%, 0.05) 51%,
+			transparent 51%,
+			transparent 75%,
+			transparent 75%,
+			transparent 100%
+		),
+		radial-gradient(
+			circle at 77% 21%,
+			hsla(329, 0%, 99%, 0.05) 0%,
+			hsla(329, 0%, 99%, 0.05) 35%,
+			transparent 35%,
+			transparent 55%,
+			transparent 55%,
+			transparent 100%
+		),
+		radial-gradient(
+			circle at 65% 91%,
+			hsla(329, 0%, 99%, 0.05) 0%,
+			hsla(329, 0%, 99%, 0.05) 46%,
+			transparent 46%,
+			transparent 76%,
+			transparent 76%,
+			transparent 100%
+		),
+		linear-gradient(45deg, rgb(83, 91, 235), rgb(6, 33, 110));
 	/* max-width: 475px;
 	height: 812px;
 	margin: 0 auto; */
@@ -76,19 +157,14 @@ input:focus {
 .light-container:nth-child(2) {
 	background-color: #002d67;
 	color: white;
-	max-width: 100px;
-	max-height: 100px;
+
 	padding: 10px;
 }
 .light-container:nth-child(1) {
-	max-width: 100px;
-	max-height: 100px;
 	font-size: 12px;
 	padding: 10px;
 }
 .light-container:nth-child(3) {
-	max-width: 100px;
-	max-height: 100px;
 	font-size: 8px;
 	padding: 10px;
 }
@@ -134,27 +210,23 @@ input:focus {
 	background: #04aa6d;
 	cursor: pointer;
 }
-.circle > div {
+.circle > button {
 	border-radius: 50%;
+	width: 36px;
+	height: 36px;
 }
 .scenes {
 	display: flex;
 }
 .scenes:nth-child(1) {
-	background-color: #04aa6d;
+	background-color: #ff9b9b;
 }
 .scenes:nth-child(2) {
-	background-color: #aa6804;
+	background-color: #de94eb;
 }
 .scenes:nth-child(3) {
-	background-color: #2804aa;
+	background-color: #94caeb;
 }
 .scenes:nth-child(4) {
-	background-color: #aa0481;
-}
-.scenes:nth-child(5) {
-	background-color: #8caa04;
-}
-.scenes:nth-child(6) {
-	background-color: #aa4104;
+	background-color: #94eb9e;
 }
