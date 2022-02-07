@@ -6,9 +6,9 @@ const ButtonComponent = ({ image, title, description }) => {
 		description: "4 lights",
 	};
 	return (
-		<div className="bedroom bg-white rounded-2xl max-w-xs p-8 gap-10">
+		<div className="bedroom text-sm bg-white rounded-2xl  w-[150px] h-44 p-8 gap-10">
 			<img src={image} />
-			<h3>{title}</h3>
+			<h3 className="">{title}</h3>
 			<p>{description}</p>
 		</div>
 	);

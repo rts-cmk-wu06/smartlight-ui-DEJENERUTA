@@ -1,12 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import LightComponent from "./LightComponent";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import Avatar from "@material-ui/core/Avatar";
+import arrowBack from "../assets/back-arrow.svg";
 import lightBulbImage from "../assets/light-bulb.jpg";
 import surfaceImage from "../assets/surface.svg";
 import furnitureImage from "../assets/furniture-household.svg";
 import bedLilleImage from "../assets/bed-lille.svg";
+import powerOff from "../assets/poweroff.svg";
+import solutionRight from "../assets/solutionright.svg";
+import solutionLeft from "../assets/solutionleft.svg";
+import Slider from "react-input-slider";
 
 const headerVariants = {
 	in: {
@@ -31,6 +36,7 @@ const pageTransition = {
 	duration: 0.5,
 };
 const Room = () => {
+	const [value, setValue] = useState("");
 	return (
 		<>
 			<motion.div
@@ -43,7 +49,14 @@ const Room = () => {
 				<div className="room-header flex justify-between">
 					<Link className="back text-white" to="/">
 						<h1 className="room-title p-8">
-							<span className="arrow">⬅️</span> Bed
+							<span className="arrow">
+								<img
+									src={arrowBack}
+									style={{ width: "10px", height: "10px" }}
+									alt=""
+								/>
+							</span>{" "}
+							Bed
 							<span className="room block">Room</span>
 							<p className="text-goldenYello">4 Lights</p>
 						</h1>
@@ -62,13 +75,67 @@ const Room = () => {
 				</div>
 			</motion.div>
 			<motion.div
-				className="white-panel bg-gray rounded-t-3xl"
+				className="white-panel bg-gray rounded-t-3xl flex justify-between relative"
 				initial="initial"
 				animate="in"
 				exit="out"
 				variants={whitePanelVariants}
 				transition={pageTransition}
-			></motion.div>
+			>
+				<img
+					className="absolute -top-3 right-10"
+					src={powerOff}
+					style={{ width: "50px", height: "50px" }}
+					alt=""
+				/>
+				<div className="w-full">
+					<h1 className="p-8">Intensity</h1>
+					<div className="lights flex justify-between items-end w-full">
+						<img
+							src={solutionRight}
+							style={{ width: "50px", height: "50px" }}
+							alt=""
+						/>
+						<div className="flex flex-col w-full gap-2">
+							<Slider
+								styles={{
+									track: {
+										width: "100%",
+										height: "2px",
+										backgroundColor: "gray",
+									},
+									active: {
+										backgroundColor: "yellow",
+									},
+									thumb: {
+										width: 15,
+										height: 15,
+									},
+									disabled: {
+										opacity: 0.5,
+									},
+								}}
+								axis="x"
+								x={value.x}
+								onChange={({ x }) => setValue((value) => ({ ...value, x }))}
+							/>
+							<div className="flex justify-between">
+								<div className="h-4 w-[1px] bg-black"></div>
+								<div className="h-4 w-[1px] bg-black"></div>
+								<div className="h-4 w-[1px] bg-black"></div>
+								<div className="h-4 w-[1px] bg-black"></div>
+								<div className="h-4 w-[1px] bg-black"></div>
+								<div className="h-4 w-[1px] bg-black"></div>
+							</div>
+						</div>
+						<img
+							src={solutionLeft}
+							style={{ width: "50px", height: "50px" }}
+							alt=""
+						/>
+					</div>
+				</div>
+			</motion.div>
 		</>
 	);
 };
