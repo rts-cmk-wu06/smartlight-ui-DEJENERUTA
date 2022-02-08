@@ -86,7 +86,7 @@ const Room = () => {
 				transition={pageTransition}
 			>
 				<img
-					className="absolute -top-3 right-10"
+					className="absolute -top-6 right-4"
 					src={powerOff}
 					style={{ width: "50px", height: "50px" }}
 					alt=""
