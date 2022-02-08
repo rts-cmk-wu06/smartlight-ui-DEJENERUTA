@@ -2,7 +2,7 @@ import React from "react";
 
 const Lamp = ({ color }) => {
 	return (
-		<div>
+		<div className="lamp-animation mr-8">
 			<svg
 				width="139"
 				height="147"
