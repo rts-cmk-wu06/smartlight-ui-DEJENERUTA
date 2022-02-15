@@ -1,8 +1,37 @@
 import React from "react";
+import { motion } from "framer-motion";
+/* import Context from "./components/Context"; */
 
-const Lamp = ({ color }) => {
+const backdrop = {
+	visible: { opacity: 1 },
+	hidden: { opacity: 0 },
+};
+
+const modal = {
+	hidden: { y: "-100vh", opacity: 0 },
+	visible: {
+		y: "200px",
+		opacity: 1,
+		transition: { delay: 0.5 },
+	},
+};
+const generateColor = (isTurnedOn, brightness, tone) => {
+	if (!isTurnedOn) {
+		return "black";
+	} else {
+		return `hsl(${tone}, 100%, ${brightness * 0.75}%)`;
+	}
+};
+const Lamp = ({ isTurnedOn, brightness, tone }) => {
+	const color = generateColor(isTurnedOn, brightness, tone);
 	return (
-		<div className="lamp-animation mr-8">
+		<motion.div
+			className="lamp-animation mr-8"
+			variants={backdrop}
+			initial="hidden"
+			animate="visible"
+			exit="hidden"
+		>
 			<svg
 				width="139"
 				height="147"
@@ -34,9 +63,9 @@ const Lamp = ({ color }) => {
 						width="54"
 						height="54"
 						filterUnits="userSpaceOnUse"
-						color-interpolation-filters="sRGB"
+						colorInterpolationFilters="sRGB"
 					>
-						<feFlood flood-opacity="0" result="BackgroundImageFix" />
+						<feFlood floodOpacity="0" result="BackgroundImageFix" />
 						<feColorMatrix
 							in="SourceAlpha"
 							type="matrix"
@@ -63,7 +92,7 @@ const Lamp = ({ color }) => {
 					</filter>
 				</defs>
 			</svg>
-		</div>
+		</motion.div>
 	);
 };
 
