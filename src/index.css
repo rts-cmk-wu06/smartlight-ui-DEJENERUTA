@@ -229,6 +229,6 @@ input:focus {
 .scenes:nth-child(4) {
 	background-color: #94eb9e;
 }
-.lamp-animation {
-	transition: transform 1s ease-in-out;
+.power-button.off img {
+	filter: grayscale(100%);
 }

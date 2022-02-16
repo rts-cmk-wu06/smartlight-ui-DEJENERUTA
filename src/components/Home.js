@@ -10,6 +10,7 @@ import kitchenStaff from "../assets/kitchen.svg";
 import bathStaff from "../assets/bathtube.svg";
 import outDoor from "../assets/house.svg";
 import balconyStaff from "../assets/balcony.svg";
+import * as Sentry from "@sentry/react";
 
 const headerVariants = {
 	in: {
@@ -62,13 +63,15 @@ const Home = () => {
 				<nav className="nav">
 					<ul className="ul  gap-8 p-8 grid grid-cols-2 place-content-center ">
 						<li className="w-full">
-							<Link className="block" to="/room">
-								<ButtonComponent
-									image={bedImage}
-									title="Bed room"
-									description="4 Lights"
-								/>
-							</Link>
+							<Sentry.ErrorBoundary fallback={<p>An error occured</p>}>
+								<Link className="block" to="/room">
+									<ButtonComponent
+										image={bedImage}
+										title="Bed room"
+										description="4 Lights"
+									/>
+								</Link>
+							</Sentry.ErrorBoundary>
 						</li>
 						<li className="w-full">
 							<Link className="block" to="/room">
